@@ -23,7 +23,7 @@ class Colors:
 class Todos:
     def __init__(self):
         self.parser = argparse.ArgumentParser()
-        self.db_file: str = "todos.db"
+        self.db_file: str = f"{os.path.dirname(os.path.realpath(__file__))}/todos.db"
         self.db_exists: bool = False if not os.path.isfile(self.db_file) else True
         self.con: Connection = sqlite3.connect(self.db_file)
         self.cur: Cursor = self.con.cursor()
@@ -160,3 +160,4 @@ class Todos:
 
         
 todos = Todos()
+todos.close()
