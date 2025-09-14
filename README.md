@@ -18,52 +18,21 @@ $ sudo ln -s ~/path/to/todo.sh /bin/todo
 
 _Available commands:_
 
-Show current list of TODOs
 ```
-$ todo 
+$ todo                                     - Show current list of TODOs
+$ todo new "TODO description"              - Create a new TODO
+$ todo remove <TODO_ID>                    - Remove a TODO
+$ todo update <TODO_ID> "New description"  - Update TODO description
+$ todo <TODO_ID> completed                 - Mark TODO as completed
+$ todo all completed                       - Mark all TODOs as completed
+$ todo clear                               - Clear all TODOs
 ```
-
-Create a new TODO
-```
-$ todo new "TODO description" 
-``` 
-
-Remove a TODO
-``` 
-$ todo remove <TODO_ID> 
-``` 
-
-Update TODO description
-``` 
-$ todo update <TODO_ID> "New description" 
-``` 
-
-Mark TODO as completed
-```
-$ todo <TODO_ID> completed 
-``` 
-
-Mark all TODOs as completed
-```
-$ todo all completed 
-``` 
-
-Clear all TODOs
-```
-$ todo clear 
-``` 
 
 _Examples:_
 
 ``` 
 $ todo new "Go get groceries" 
-```
-```
 $ todo update 1 "Go buy batteries" 
-```
-```
 $ todo 1 completed 
-```
-```
 $ todo clear 
 ```
